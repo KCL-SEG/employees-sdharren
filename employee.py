@@ -20,10 +20,10 @@ class Employee:
         if self.contract == "salary":
             pay_desc = f'{self.name} works on a monthly salary of {self.pay}'
         elif self.contract == "hourly":
-            pay_desc = f'{self.name} works on a contract of {self.hours} at {self.pay}\hour'
+            pay_desc = f'{self.name} works on a contract of {self.hours} hours at {self.pay}/hour'
 
         if self.commission_type == "bonus":
-            comm_desc = f' and receives a bonus commision of {self.commission}.'
+            comm_desc = f' and receives a bonus commission of {self.commission}.'
         elif self.commission_type == "rate":
             comm_desc = f' and receives a commision of {self.num_of_contracts} contract(s) at {self.commission}/contract.'
         else:
@@ -39,7 +39,7 @@ billie = Employee('Billie', contract="salary", pay=4000)
 charlie = Employee('Charlie', contract="hourly", pay=25, hours=100)
 
 # Renee works on a monthly salary of 3000 and receives a commission for 4 contract(s) at 200/contract.  Their total pay is 3800.
-renee = Employee('Renee', contract="monthly", pay=3000, commission_type="rate", commission=200, num_of_contracts=4)
+renee = Employee('Renee', contract="salary", pay=3000, commission_type="rate", commission=200, num_of_contracts=4)
 
 # Jan works on a contract of 150 hours at 25/hour and receives a commission for 3 contract(s) at 220/contract.  Their total pay is 4410.
 jan = Employee('Jan', contract="hourly", pay=25, hours=150, commission_type="rate", commission=220, num_of_contracts=3)
