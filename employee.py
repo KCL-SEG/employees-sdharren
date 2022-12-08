@@ -25,7 +25,7 @@ class Employee:
         if self.commission_type == "bonus":
             comm_desc = f' and receives a bonus commission of {self.commission}.'
         elif self.commission_type == "rate":
-            comm_desc = f' and receives a commission of {self.num_of_contracts} contract(s) at {self.commission}/contract.'
+            comm_desc = f' and receives a commission for {self.num_of_contracts} contract(s) at {self.commission}/contract.'
         else:
             comm_desc = "."
 
